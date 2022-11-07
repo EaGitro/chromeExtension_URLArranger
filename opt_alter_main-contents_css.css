@@ -1,0 +1,153 @@
+/* DOM
+
+    AMC_main
+
+        AMC_main_header
+            AMC_main_header_checkbox
+            AMC_main_header_TU
+            AMC_main_header_date
+            AMC_main_header_keyword
+            AMC_main_header_memo
+
+        
+        AMC_One_Date_div
+            AMC_subHead_date_div
+                AMC_subHead_date_OnlyDate_div   (date)
+                AMC_subHead_date_btn_a_     (a btn ("select this all"))
+
+            // each item
+
+            AMC_eachItem
+                AMC_eachItem_checkbox_class
+                    AMC_eachItem_checkbox       (check box)
+                
+                AMC_eachItem_title-url_div
+                    AMC_eachItem_favicon    (favicon)
+                    AMC_eachItem_title_a    (title)
+                    AMC_eachItem_url_div    (url)
+
+                AMC_eachItem_date
+
+                AMC_eachItem_keyword
+
+                AMC_eachItem_group
+
+                AMC_eachItem_memo
+
+
+
+
+    */
+
+
+/* header--------------------------------------- */
+
+#AMC_main_header {
+    display: flex;
+    height: 5rem;
+    background-color: #f3f3f3;
+    align-items: center;
+}
+
+#AMC_main_header_checkbox {
+    text-align: center;
+    
+    width: 5%;
+}
+
+#AMC_header_contents-tabs-txt {
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+#AMC_main_header_TU {
+    text-align: center;
+
+    width: 50%;
+}
+
+#AMC_main_header_date {
+    text-align: center;
+    width: 15%;
+}
+
+#AMC_main_header_KG {
+    text-align: center;
+    width: 10%;
+}
+
+#AMC_main_header_memo {
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+
+/* one date---------------------------------------------- */
+
+.AMC_subHead_date_btn_a{
+    width: 45%;
+}
+
+.AMC_subHead_date_div {
+    display: flex;
+    height: 3rem;
+    background-color: #fff5fb;
+    align-items: center;
+}
+
+
+
+.AMC_subHead_date_OnlyDate_div {
+    flex-grow: 1;
+
+}
+
+.AMC_eachItem {
+    display: flex;
+    padding: 0.7em 0em 0.7em 0em;
+    border: 0.5px dotted #ccc;
+}
+
+.AMC_eachItem_checkbox_class {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.AMC_eachItem_checkbox {
+    transform: scale(1.3);
+}
+
+.AMC_contents-tabs-txt {
+    display: flex;
+    width: 95%;
+}
+
+.AMC_eachItem_favicon-title-url_div {
+    width: 50%;
+}
+
+.AMC_eachItem_url_div {
+    opacity: 0.3;
+    transition: all .2s;
+}
+
+.AMC_contents-tabs-txt:hover .AMC_eachItem_url_div {
+    opacity: 0.7;
+}
+
+
+.AMC_eachItem_date {
+    width: 15%;
+}
+
+.AMC_eachItem_keyword-group {
+    width: 10%;
+}
+
+.AMC_eachItem_memo {
+    flex-grow: 1;
+}

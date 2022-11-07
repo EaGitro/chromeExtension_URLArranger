@@ -1,0 +1,147 @@
+/* this css is for the added DOM in opt_save-setting-box.js */
+
+
+/* 
+#save-setting-box
+    #SSB-main-div
+        #SSB_select_deselect
+            #select-unsaved
+            #deselect
+    #SSB_inputs
+        #keyword
+            #txt_SSB_keyword_div
+            #txt_SSB_keyword_inp
+            #txt_SSB_keyword_keywordlist_div
+                #SK_tmp_Keyword .SSB_savedKeywords_list_item_class
+        #group
+
+
+
+*/
+
+
+#save-setting-box {
+    height: 19.5%;
+    border: 3px solid #ccc;
+}
+
+
+
+#SSB_main-div {
+    /* display: flex; */
+    height: 100%;
+}
+
+
+#SSB_select_deselect {
+    display: flex;
+}
+
+#select-unsaved {
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    margin: 0.2em;
+    border: 1px solid #ccc;
+}
+
+#deselect {
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    margin: 0.2em;
+    border: 1px solid #ccc;
+}
+
+#SSB_inputs {
+    display: flex;
+    height: 80%;
+}
+
+
+/* keyword */
+
+#keyword {
+    display: flex;
+    flex-flow: column;
+    margin: 0.2em;
+    width: 100%;
+}
+
+#txt_SSB_keyword_keywordlist_div {
+    border: 2px solid #ccc;
+    /* height: 100%; */
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+
+.SSB_savedKeywords_list_item_class {
+    overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+
+}
+
+
+/* group */
+
+#group {
+    display: flex;
+    flex-flow: column;
+    margin: 0.2em;
+    width: 100%;
+}
+
+#txt_SSB_group_grouplist_div {
+    border: 2px solid #ccc;
+    /* height: 100%; */
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+
+.SSB_savedGroups_list_item_class {
+    overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+
+}
+
+
+/* memo */
+
+#memo {
+    display: flex;
+    flex-flow: column;
+    margin: 0.2em;
+    width: 100%;
+}
+
+#txt_SSB_memo_textarea {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* save */
+#save {
+    margin: 0.2em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#txt_SSB_save_div {
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-bottom: 0.5em; 
+    line-height: 190%;
+    width: 50%;
+    height: 50%;
+    font-size: 2em;
+    padding: 0.2em;
+    border: 1px solid #ccc;
+}

@@ -194,7 +194,7 @@ async function SM_top_subHead_making_DOM(asi_ak_ag, Lang) {
     let forLangChoice_AMC_header_TU1 = ["saved urls", "保存済みURL"];
     txt_AMC += forLangChoice_AMC_header_TU1[Lang];
     txt_AMC += "<br>"
-    let forLangChoice_AMC_header_TU2 = ["title", "タイトル"];
+    let forLangChoice_AMC_header_TU2 = ["titles", "タイトル"];
     txt_AMC += forLangChoice_AMC_header_TU2[Lang]
     txt_AMC += "</div>"
 

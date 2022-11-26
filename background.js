@@ -1,11 +1,9 @@
 
 
-var script01 = function()
-{
+var script01 = function () {
     chrome.runtime.openOptionsPage();
 };
- 
-(function()
-{
+
+(function () {
     chrome.action.onClicked.addListener(script01);
 })();

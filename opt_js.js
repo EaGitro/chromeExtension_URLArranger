@@ -292,6 +292,9 @@ function reload() {
 
     sideMenu_pink("SM_NO_top_div")
 
+    SSB_making_DOM(Lang)
+    allAsyncFnctions()
+
 }
 // function movepage(tabid) {
 //     chrome.tabs.update(

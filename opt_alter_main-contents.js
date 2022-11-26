@@ -27,7 +27,7 @@ AMC_main
 
 
             AMC_contents-tabs-txt
-        
+         
                 AMC_eachItem_favicon-title-url_div
                     AMC_eachItem_title_a    (title)
                     AMC_eachItem_url_div    (url)
@@ -228,6 +228,8 @@ async function SM_top_subHead_making_DOM(asi_ak_ag, Lang) {
     txt_AMC += "</div>"
 
 
+
+    // All Saved Items
     if (asi_ak_ag == "ASI") {
 
         // to pink
@@ -237,12 +239,14 @@ async function SM_top_subHead_making_DOM(asi_ak_ag, Lang) {
 
         let M_ASI_AK_AG = ''
 
-
+        let ASI_allDate = new Set();
 
         let TF_first = true;
 
         for (let i in mainDataObj) { // mainDataObj { "Date url" :[]}
             let ThisDate = i.split(" ")[0]
+
+            ASI_allDate.add(ThisDate);
 
             if (M_ASI_AK_AG != ThisDate) {
 
@@ -276,8 +280,27 @@ async function SM_top_subHead_making_DOM(asi_ak_ag, Lang) {
         document.getElementById("main-contents").innerHTML = txt_AMC;
 
 
+        // addEvent (select this all)
+
+        for (let i of ASI_allDate) {
+
+            let idAddEvent = "AMC_One_Date_div_";
+            idAddEvent += i;
+            let element_AMC_OneDate_div = document.getElementById(idAddEvent);
+            element_AMC_OneDate_div.querySelector(".AMC_subHead_date_btn_a").addEventListener("click",
+                {
+                    AMC_DOM: element_AMC_OneDate_div,
+                    handleEvent: AMC_addEvent_selectThisAll
+                }
+            )
+        }
+
+
     }
 
+
+
+    // All Keywords
     else if (asi_ak_ag == "AK") {
 
         sideMenu_pink("SM_AK_top_div")
@@ -334,8 +357,28 @@ async function SM_top_subHead_making_DOM(asi_ak_ag, Lang) {
         txt_AMC += "</div>"
 
         document.getElementById("main-contents").innerHTML = txt_AMC;
+
+
+        // addEvent (select this all)
+        for (let i in arrangeDataKeyword) {
+
+            let idAddEvent = "AMC_One_Date_div_";
+            idAddEvent += i;
+            let element_AMC_OneDate_div = document.getElementById(idAddEvent);
+            element_AMC_OneDate_div.querySelector(".AMC_subHead_date_btn_a").addEventListener("click",
+                {
+                    AMC_DOM: element_AMC_OneDate_div,
+                    handleEvent: AMC_addEvent_selectThisAll
+                }
+            )
+
+        }
+
     }
 
+
+
+    // All Groups
     else if (asi_ak_ag == "AG") {
 
         sideMenu_pink("SM_AG_top_div");
@@ -392,9 +435,26 @@ async function SM_top_subHead_making_DOM(asi_ak_ag, Lang) {
         txt_AMC += "</div>"
 
         document.getElementById("main-contents").innerHTML = txt_AMC;
+
+
+
+        // addEvent (select this all)
+        for (let i in arrangeDataGroup) {
+
+            let idAddEvent = "AMC_One_Date_div_";
+            idAddEvent += i;
+            let element_AMC_OneDate_div = document.getElementById(idAddEvent);
+            element_AMC_OneDate_div.querySelector(".AMC_subHead_date_btn_a").addEventListener("click",
+                {
+                    AMC_DOM: element_AMC_OneDate_div,
+                    handleEvent: AMC_addEvent_selectThisAll
+                }
+            )
+
+        }
     }
 
-    // addEventlistener (select this all)
+
 
 
 
@@ -405,4 +465,12 @@ function SM_top_subHead_addEvent() {
     let asi_ak_ag = this.ASI_AK_AG;
     let Lang = this.Lang;
     SM_top_subHead_making_DOM(asi_ak_ag, Lang)
+}
+
+
+
+
+function AMC_addEvent_selectThisAll() {
+    let AMC_DOM = this.AMC_DOM;
+    console.log(AMC_DOM);
 }

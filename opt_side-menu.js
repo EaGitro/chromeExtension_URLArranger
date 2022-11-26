@@ -1,7 +1,7 @@
 
 async function SM_making_DOM(Lang) {
 
-    
+
     await allAsyncFnctions()
 
     let txt_SM = "";
@@ -112,7 +112,7 @@ async function SM_making_DOM(Lang) {
         allAsyncFnctions();
         console.log(Lang)
         SSB_making_DOM(Lang)
-        
+
     }
     )
 
